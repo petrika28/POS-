@@ -1,0 +1,40 @@
+﻿@model List<WebApplication5.Models.Client>;
+
+
+@if (ViewBag.ErrorMessage != null)
+{
+	<p style="color:red; font-weight:800">@ViewBag.ErrorMessage</p>
+}
+<div class="header">
+</div>
+
+@if (Model == null || !Model.Any())
+{
+	<p>No items found.</p>
+}
+else
+{
+
+
+
+	<table>
+		<tr>
+			<td class="cell" style="font-weight:bold"> ID Number </td>
+			<td class="cell" style="font-weight:bold"> Name </td>
+			<td class="cell" style="font-weight:bold"> Address </td>
+			<td class="cell" style="font-weight:bold"> Category </td>
+		</tr>
+		@foreach (var client in Model)
+		{
+			<tr>
+				<td class="cell"> @client.IdNumber  </td>
+				<td class="cell"> @client.Name  </td>
+				<td class="cell"> @client.Address  </td>
+				<td><a asp-action="Delete" asp-route-id="@client.Id">Delete</a></td>
+			</tr>
+
+		}
+	</table>
+}
+
+

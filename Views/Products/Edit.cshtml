@@ -1,0 +1,28 @@
+﻿@model WebApplication5.Models.Product;
+
+
+	<form asp-action="Edit" asp-controller="Products" method="post">
+		
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="type" asp-for="Name" value="@Model.Name" /></td>
+			</tr>
+			<tr>
+				<td>Price:</td>
+				<td><input type="type" asp-for="Price" value="@Model.Price" /></td>
+			</tr>
+			<tr>
+				<td>Quantity:</td>
+				<td><input type="type" asp-for="Quantity" value="@Model.Quantity" /></td>
+			</tr>
+			<tr>
+				<td>Category:</td>
+				<td><input type="type" asp-for="Category" value="@Model.Category" /></td>
+			</tr>
+			<input type="hidden" asp-for="Id" value="@Model.Id" />
+
+			</table>
+		
+		<button type="submit" >Submit</button>
+	</form>

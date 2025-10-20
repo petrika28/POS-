@@ -1,0 +1,27 @@
+﻿@{
+	ViewData["Title"] = "AddItem";
+}
+
+
+<h3>Add item</h3>
+@{
+
+	var text = TempData["Error"] as string;
+	if (text != null)
+	{
+		<p style="color:red">@text</p>
+
+	}
+}
+<form asp-action="AddItem" asp-controller="Products" method="post">
+	<label for="Name">Name:</label>
+	<input type="text" name="Name" id="Name" / required>
+	<label for="Price">Price:</label>
+	<input type="number" name="Price" id="Price" required min="1" />
+	<label for="Quantity">Quantity:</label>
+	<input type="number" name="Quantity" id="Quantity" required min="1" />
+	<label for="Quantity">Category:</label>
+	<input type="text" name="Category" id="Category" required />
+	<button type="submit">Add</button>
+
+</form>

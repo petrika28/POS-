@@ -1,0 +1,55 @@
+﻿@model List<WebApplication5.Models.Product>;
+
+
+@if (ViewBag.ErrorMessage != null)
+{
+	<p style="color:red; font-weight:800">@ViewBag.ErrorMessage</p>
+}
+<div class="header">
+	<form method="get" asp-action="Filter" asp-controller="Products">
+		<label for="category">Category:</label>
+		<input type="text" id="category" name="category" required>
+		<button>Filter items</button>
+	</form>
+	<div style="display:flex; margin-right=0%">
+		<div><a asp-action="AddItem" asp-controller="Products">Add Item</a></div>
+		<div><a asp-action="LowQuantity" asp-controller="Products">Low Quantity Items</a></div>
+		<div><a asp-action="Index" asp-controller="Invoices">Invoices</a></div>
+		<div><a asp-action="Index" asp-controller="Clients">Clients</a></div>
+	</div>
+
+
+</div>
+
+@if (Model == null || !Model.Any())
+{
+	<p>No items found.</p>
+}
+else
+{
+
+
+
+	<table>
+		<tr>
+			<td class="cell"> Name </td>
+			<td class="cell"> Price </td>
+			<td class="cell"> Quantity </td>
+			<td class="cell"> Category </td>
+		</tr>
+		@foreach (var product in Model)
+		{
+			<tr>
+				<td class="cell"> @product.Name   </td>
+				<td class="cell"> @product.Price  </td>
+				<td class="cell"> @product.Quantity  </td>
+				<td class="cell"> @product.Category  </td>
+				<td class="cell"> <a asp-route-id="@product.Id" asp-action="Delete">Delete</a> </td>
+				<td class="cell"> <a asp-route-id="@product.Id" asp-action="Edit">Edit</a> </td>
+			</tr>
+		}
+	</table>
+}
+
+
+

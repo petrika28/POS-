@@ -1,0 +1,27 @@
+﻿@model List<WebApplication5.Models.Product>;
+
+
+	<h3>Items Below 5 pieces</h3>
+
+
+		<table>
+			<tr>
+				<td class="cell"> Name </td>
+				<td class="cell"> Price </td>
+				<td class="cell"> Quantity </td>
+				<td class="cell"> Category </td>
+			</tr>
+			@foreach (var product in Model)
+			{
+				<tr>
+					<td class="cell"> @product.Name   </td>
+					<td class="cell"> @product.Price  </td>
+					<td class="cell"> @product.Quantity  </td>
+					<td class="cell"> @product.Category  </td>
+				</tr>
+			}
+		</table>
+
+
+
+
