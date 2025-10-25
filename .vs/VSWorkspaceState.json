@@ -4,8 +4,9 @@
     "\\bin",
     "\\bin\\Debug",
     "\\Controllers",
-    "\\Views"
+    "\\Views",
+    "\\Views\\Home"
   ],
-  "SelectedNode": "\\Controllers\\ClientsController.cs",
+  "SelectedNode": "\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
