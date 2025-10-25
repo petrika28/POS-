@@ -1,6 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+using Microsoft.EntityFrameworkCore;
+using POS.Data;
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<WebApplicationContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

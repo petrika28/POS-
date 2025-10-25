@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace WebApplication5.Migrations
+namespace POS.Migrations
 {
     /// <inheritdoc />
     public partial class Unique : Migration

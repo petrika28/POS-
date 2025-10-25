@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Humanizer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebApplication5.Data;
-using WebApplication5.Models;
+using POS.Data;
+using POS.Models;
 
-namespace WebApplication5.Controllers
+namespace POS.Controllers
 {
     public class InvoicesController : Controller
     {

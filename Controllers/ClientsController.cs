@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication5.Data;
+using POS.Data;
 
-namespace WebApplication5.Controllers
+namespace POS.Controllers
 {
     public class ClientsController : Controller
     {

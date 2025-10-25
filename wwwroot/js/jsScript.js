@@ -38,7 +38,7 @@
 
     // Make AJAX request to search products
     $.ajax({
-        url: '@Url.Action("SearchProducts", "Products")',  // Correct route to the Products controller
+        url: searchProductsUrl,  // Correct route to the Products controller
     type: 'GET',
     data: {term: searchTerm },
     success: function (data) {

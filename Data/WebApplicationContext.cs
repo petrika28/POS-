@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication5.Models;
+using POS.Models;
 
-namespace WebApplication5.Data
+namespace POS.Data
 {
     public class WebApplicationContext : DbContext
     {

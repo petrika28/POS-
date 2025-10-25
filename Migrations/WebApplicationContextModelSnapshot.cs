@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication5.Data;
+using POS.Data;
 
 #nullable disable
 
-namespace WebApplication5.Migrations
+namespace POS.Migrations
 {
     [DbContext(typeof(WebApplicationContext))]
     partial class WebApplicationContextModelSnapshot : ModelSnapshot
@@ -37,7 +37,7 @@ namespace WebApplication5.Migrations
                     b.ToTable("InvoiceProduct");
                 });
 
-            modelBuilder.Entity("WebApplication5.Models.Client", b =>
+            modelBuilder.Entity("POS.Models.Client", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,7 +65,7 @@ namespace WebApplication5.Migrations
                     b.ToTable("Clients");
                 });
 
-            modelBuilder.Entity("WebApplication5.Models.Invoice", b =>
+            modelBuilder.Entity("POS.Models.Invoice", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,7 +95,7 @@ namespace WebApplication5.Migrations
                     b.ToTable("Invoices");
                 });
 
-            modelBuilder.Entity("WebApplication5.Models.Product", b =>
+            modelBuilder.Entity("POS.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -127,22 +127,22 @@ namespace WebApplication5.Migrations
 
             modelBuilder.Entity("InvoiceProduct", b =>
                 {
-                    b.HasOne("WebApplication5.Models.Invoice", null)
+                    b.HasOne("POS.Models.Invoice", null)
                         .WithMany()
                         .HasForeignKey("InvoicesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApplication5.Models.Product", null)
+                    b.HasOne("POS.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WebApplication5.Models.Invoice", b =>
+            modelBuilder.Entity("POS.Models.Invoice", b =>
                 {
-                    b.HasOne("WebApplication5.Models.Client", "Client")
+                    b.HasOne("POS.Models.Client", "Client")
                         .WithMany()
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)

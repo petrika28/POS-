@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using WebApplication5.Data;
-using WebApplication5.Models;
+using POS.Data;
+using POS.Models;
 
-namespace WebApplication5.Controllers
+namespace POS.Controllers
 {
    
 

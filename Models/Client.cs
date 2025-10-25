@@ -1,4 +1,4 @@
-﻿namespace WebApplication5.Models
+﻿namespace POS.Models
 {
     public class Client
     {
